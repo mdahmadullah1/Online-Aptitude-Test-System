@@ -1,0 +1,42 @@
+{% extends 'main.html' %}
+
+{% block title %}
+    OATS - Candidate Result History
+{% endblock title %}
+
+
+{% block top %}
+<a href="{% url 'OATS:home' %}">DashBoard</a>
+<a href="{% url 'OATS:logout' %}">Logout</a>
+{% endblock %}
+
+
+
+{% block content %}
+<h1>Your Score Card</h1>
+<p>Hi this table contains the number of times you have given the test and the score you have achieved on the scale of 10</p>
+
+<table>
+    <tr>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Attempt</th>
+        <th>Right</th>
+        <th>Wrong</th>
+        <th>Points</th>
+    </tr>
+
+    {% for r in results %}
+    <tr>
+        <td>{{r.date}}</td>
+        <td>{{r.time}}</td>
+        <td>{{r.attempt}}</td>
+        <td>{{r.right}}</td>
+        <td>{{r.wrong}}</td>
+        <td>{{r.points}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
+
+

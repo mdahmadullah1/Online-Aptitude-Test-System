@@ -1,0 +1,35 @@
+{% extends 'main.html' %}
+
+{% block title %}
+OATS - Registration Status
+{% endblock title %}
+
+
+{% block top %}
+<a href="{% url 'OATS:registrationForm' %}">SignUp</a>
+<a href="{% url 'OATS:login' %}">Login</a>
+{% endblock %}
+
+
+{% block content %}
+
+{% if userStatus == 1 %}
+<div class="userStatus">
+    Sorry , username already exixts , try another one
+    <a href="{% url 'OATS:registrationForm' %}">Back to Candidate Registration</a>
+</div>
+
+{% elif userStatus == 2 %}
+<div class="userStatus">
+    Congratulations ! user created successfully
+    <a href="{% url 'OATS:login' %}">Login</a>
+</div>
+
+{% elif userStatus == 3 %}
+<div class="userStatus">
+    Oops ! Invalid data or improper request
+    <a href="{% url 'OATS:registrationForm' %}">Back to Candidate Registration</a>
+
+</div>
+{% endif %}
+{% endblock %}

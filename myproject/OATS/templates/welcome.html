@@ -1,0 +1,37 @@
+{% extends 'main.html' %}
+
+{% block title %}
+Welcome to Online Aptitude Testing System
+{% endblock title %}
+
+
+{% block top %}
+<a href="{% url 'OATS:registrationForm' %}">SignUp</a>
+<a href="{% url 'OATS:login' %}">Login</a>
+{% endblock %}
+
+{% block content %}
+<!-- <p>Welcome to Online Aptitude Testing System</p> -->
+<p style="font-size: 20px;">Are you ready to challenge yourself and elevate your skills? Welcome
+    to our cutting-edge platform designed to help you excel in aptitude
+    testing! Whether you're preparing for competitive exams, job interviews,
+    or simply want to sharpen your cognitive abilities, our platform provides the tools you need to succeed.</p>
+
+<h3>What Makes Us Unique?</h3>
+<h4 style="font-size: 22px;">Comprehensive Test Coverage: </h4>
+<p style="font-size: 20px;">Our system offers a wide range of aptitude tests covering various disciplines, including
+    mathematics,
+    logical reasoning, verbal ability, and more. Each test is meticulously
+    crafted to simulate real-world exam conditions, ensuring that you're fully prepared.
+</p>
+
+<h4 style="font-size: 22px;">Interactive User Experience:</h4>
+<p style="font-size: 20px;">Experience seamless navigation and a user-friendly interface designed to enhance your
+    learning journey.
+    Dive into our tests effortlessly and track your progress with detailed performance analytics.</p>
+
+
+<p style="font-size: 20px;">Get Started Today!Ready to embark on your journey towards mastery? Sign up now and take your first step towards acing your next aptitude test! Whether you're a student, 
+    professional, or lifelong learner, our platform is your gateway to success.</p>
+
+{% endblock %}
